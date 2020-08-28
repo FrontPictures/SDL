@@ -1448,7 +1448,7 @@ SDL_CreateWindow(const char *title, int x, int y, int w, int h, Uint32 flags)
     }
 
     /* Some platforms blow up if the windows are too large. Raise it later? */
-    if ((w > 16384) || (h > 16384)) {
+    if ((w > 32768) || (h > 32768)) {
         SDL_SetError("Window is too large.");
         return NULL;
     }
